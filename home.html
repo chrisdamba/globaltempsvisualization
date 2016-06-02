@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
     <title>Visualizing Global and Hemispheric Annual Mean Temperature Anomalies</title>
+    <style>
+        body {            
+            font-family: 'PT Sans', sans-serif;
+            font-weight: 300;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- Prepare a Dom with size (width and height) for ECharts -->
     <div id="main" style="height:700px"></div>
+    <h2>Assignment: Programming Assignment 1 - Submitted by Christopher Dambamuromo</h2>
     <div>
-        <p>In this line chart visualization, data for the Global, the Northern and Southern Hemispheres annual mean temperature changes is shown from 1880 to present where the anomalies shown are relative to the 1951-80 reference period means. The blue line describes the data for the Northern Hemisphere, the red for the Southern Hemisphere, and the black line is for the Globe.
+        <p>In this line chart visualization, data for the Global, the Northern and Southern Hemispheres annual mean temperature changes is shown from 1880 to present where the anomalies shown are relative to the 1951-80 reference period means. The blue line describes the data for the Northern Hemisphere, the orange for the Southern Hemisphere, and the purple line is for the Globe.
         </p>
 
-        <p><strong>Data Source:</strong> GISTEMP site, specifically the data from "Table Data: Global and Hemispheric Monthly Means and Zonal Annual Means."
+        <p><strong>Data Source:</strong> <a href="http://data.giss.nasa.gov/gistemp/">GISTEMP site</a>, specifically the data from "Table Data: Global and Hemispheric Monthly Means and Zonal Annual Means."
         </p>
     </div>
     <!-- ECharts import -->
@@ -26,16 +35,6 @@
                 },
                 legend: {
                     data:['Southern Hemisphere', 'Northern Hemisphere', 'Global']
-                },
-                toolbox: {
-                    show : true,
-                    feature : {
-                        mark : {show: true},
-                        dataView : {show: true, readOnly: false},
-                        magicType : {show: true, type: ['line']},
-                        restore : {show: true},
-                        saveAsImage : {show: true}
-                    }
                 },
                 xAxis : [
                     {
